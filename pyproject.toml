@@ -4,16 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kulchur"
+version = "1.0.0"
 description = "Pull publicly available Goodreads data on books, authors and users"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-version = "1.0.0"
-authors = [{"name" = "rhawrami", "email" = "ravanhawrami@gmail.com"}]
+authors = [{"name" = "rhawrami", "email" = "rhawrami@proton.me"}]
 readme = {"file" = "README.md", content-type = "text/markdown"}
+license = "MIT"
+license-files = ["LICENSE.md"]
 dependencies = ["aiohttp", "requests", "lxml", "bs4"]
+
+[project.urls]
+Homepage = "https://github.com/rhawrami/kulchur"
 
 [tool.setuptools]
 packages = { find = { include = ["kulchur"], exclude = ["tests"] } }
