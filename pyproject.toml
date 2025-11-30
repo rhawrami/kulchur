@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kulchur"
+description = "Pull publicly available Goodreads data on books, authors and users"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+version = "1.0.0"
+authors = [{"name" = "rhawrami", "email" = "ravanhawrami@gmail.com"}]
+readme = {"file" = "README.md", content-type = "text/markdown"}
+dependencies = ["aiohttp", "requests", "lxml", "bs4"]
+
+[tool.setuptools]
+packages = { find = { include = ["kulchur"], exclude = ["tests"] } }
